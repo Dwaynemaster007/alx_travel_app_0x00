@@ -141,4 +141,4 @@ The seeder creates:
 4. Use seed command to populate with test data
 5. Test API endpoints and data relationships
 
-This structure provides a solid foundation for a travel booking platform with proper data modeling, API serialization, and development tooling.
+This structure provides a solid foundation for a travel booking platform with proper data modeling, API serialization, and development tooling..

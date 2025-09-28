@@ -1,6 +1,6 @@
 # ALX Travel App 0x00
 
-A Django-based travel booking application with RESTful API endpoints for managing property listings, bookings, and reviews.
+A Django-based travel booking application with RESTful API endpoints for managing property listings, bookings, and reviews..
 
 ## Project Structure
 
