@@ -1,22 +1,23 @@
-#!/usr/bin/env python
-"""Django's command-line utility for administrative tasks."""
-import os
-import sys
+#!/usr/bin/env python3
+"""
+Serializers for Listing and Booking models.
+"""
+
+from rest_framework import serializers
+from .models import Listing, Booking
 
 
-def main():
-    """Run administrative tasks."""
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'alx_travel_app.settings')
-    try:
-        from django.core.management import execute_from_command_line
-    except ImportError as exc:
-        raise ImportError(
-            "Couldn't import Django. Are you sure it's installed and "
-            "available on your PYTHONPATH environment variable? Did you "
-            "forget to activate a virtual environment?"
-        ) from exc
-    execute_from_command_line(sys.argv)
+class ListingSerializer(serializers.ModelSerializer):
+    """Serializer for the Listing model."""
+
+    class Meta:
+        model = Listing
+        fields = ['id', 'title', 'description', 'location', 'price_per_night', 'created_at']
 
 
-if __name__ == '__main__':
-    main()
+class BookingSerializer(serializers.ModelSerializer):
+    """Serializer for the Booking model."""
+
+    class Meta:
+        model = Booking
+        fields = ['id', 'listing', 'user', 'check_in', 'check_out', 'created_at']
