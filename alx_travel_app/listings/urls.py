@@ -1,5 +1,7 @@
 from django.urls import path
 
+from .views import ListingListView
+
 urlpatterns = [
-    # Your URL patterns for the listings app will go here
+    path('listings/', ListingListView.as_view(), name='listing-list'),
 ]

@@ -1,3 +1,10 @@
-from django.shortcuts import render
+from rest_framework import generics
 
-# Create your views here.
+from .models import Listing
+from .serializers import ListingSerializer
+
+
+class ListingListView(generics.ListAPIView):
+    """Read-only list of listings, to check the models and serializers. Full CRUD comes in 0x01."""
+    queryset = Listing.objects.all()
+    serializer_class = ListingSerializer
